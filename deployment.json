@@ -1,8 +1,14 @@
 {
   "network": "base-sepolia",
-  "contract": "NovaGuardian",
-  "address": "0xF3ca53f1Acb7D561D7c63B2D3D22F12DDC4ae470",
-  "deployer": "0x721513bBcF116Cd0742792BB1CEb31Ce5eFa9E31",
-  "deployedAt": "2026-02-08T12:32:36Z",
-  "txHash": "pending-verification"
+  "contracts": {
+    "NovaGuardian": "0xF3ca53f1Acb7D561D7c63B2D3D22F12DDC4ae470"
+  },
+  "token": {
+    "network": "base",
+    "name": "NovaGuardian Token",
+    "symbol": "NOVA",
+    "address": "0xc08ec5e9c014b5b63ccdfcba3f94cf660e3c86aa",
+    "mintClub": "https://mint.club/token/base/NOVA"
+  },
+  "deployedAt": "2026-02-08T12:33:45Z"
 }

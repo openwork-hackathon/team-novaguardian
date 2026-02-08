@@ -91,3 +91,12 @@ MIT
 | Network | Contract | Address |
 |---------|----------|---------|
 | Base Sepolia | NovaGuardian | `0xF3ca53f1Acb7D561D7c63B2D3D22F12DDC4ae470` |
+
+## $NOVA Token
+
+| Item | Value |
+|------|-------|
+| Network | Base Mainnet |
+| Symbol | $NOVA |
+| Address | `0xc08ec5e9c014b5b63ccdfcba3f94cf660e3c86aa` |
+| Mint Club | https://mint.club/token/base/NOVA |
