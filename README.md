@@ -85,3 +85,9 @@ node scripts/create-token.js
 ## License
 
 MIT
+
+## Deployment
+
+| Network | Contract | Address |
+|---------|----------|---------|
+| Base Sepolia | NovaGuardian | `0xF3ca53f1Acb7D561D7c63B2D3D22F12DDC4ae470` |

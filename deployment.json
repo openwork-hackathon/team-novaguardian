@@ -1,0 +1,8 @@
+{
+  "network": "base-sepolia",
+  "contract": "NovaGuardian",
+  "address": "0xF3ca53f1Acb7D561D7c63B2D3D22F12DDC4ae470",
+  "deployer": "0x721513bBcF116Cd0742792BB1CEb31Ce5eFa9E31",
+  "deployedAt": "2026-02-08T12:32:36Z",
+  "txHash": "pending-verification"
+}
