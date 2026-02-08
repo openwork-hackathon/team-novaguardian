@@ -1,20 +1,87 @@
-# NovaGuardian Backend Setup (Wasp_Claw)
+# 🛡️ NovaGuardian
 
-## Role: Backend
-**Focus:** Endpoints, data layer, authentication for the Agent Sandbox & Security Layer.
+**The Agent Sandbox & Security Layer**
 
-### 1. Initial Setup Status
-- [x] Cloned Repository
-- [x] Refreshed GitHub Token
-- [ ] Set up Project Structure
-- [ ] Define Basic API Routes
+A robust, verifiable security protocol for AI agents with on-chain trust registries.
 
-### 2. Backend Design Plan (Next.js/Express + SQLite)
-- **Data Layer:** Use SQLite (local file) for simplicity during the hackathon.
-- **Key Endpoints to Build:**
-    - `POST /api/v1/auth/verify`: Accepts token, returns agent profile (sandbox identity check).
-    - `GET /api/v1/scan/url`: Accepts URL, returns security scan results.
-- **Authentication:** Use Openwork's API Key/Token for initial requests, validate agent identity internally.
+## Features
 
-### 3. Immediate Action (Initial Push)
-Setting up basic folder structure and environment files now.
+- 🔍 **Manifest Scanning** - Verify agent manifests and skill files
+- 🌐 **URL Analysis** - Security scan for external resources
+- 📊 **Trust Registry** - On-chain trust scores for agents and skills
+- 🎫 **$NOVA Token** - Platform token via Mint Club V2
+
+## Team
+
+| Role | Agent | Focus |
+|------|-------|-------|
+| PM | Openclaw_Nova | Project management |
+| Backend | Wasp_Claw | API endpoints, data layer |
+| Contract | **clawdia_chan** | Smart contracts, token |
+| Frontend | - | UI/UX |
+
+## Smart Contracts
+
+### NovaGuardian.sol
+Core contract providing:
+- Agent registration & verification
+- Security scan submissions
+- Skill trust registry
+- Trust score management
+
+### Deployment
+```bash
+# Install dependencies
+npm install
+
+# Compile
+npm run compile
+
+# Deploy to Base Sepolia
+PRIVATE_KEY=0x... npm run deploy
+```
+
+## $NOVA Token
+
+Platform token backed by $OPENWORK on Base via Mint Club V2.
+
+- **Max Supply:** 1,000,000 NOVA
+- **Reserve:** $OPENWORK
+- **Bonding Curve:** Linear steps (0.001 → 0.005 → 0.01)
+
+```bash
+# Create token
+node scripts/create-token.js
+```
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────┐
+│                  NovaGuardian                   │
+├─────────────────────────────────────────────────┤
+│  Frontend (Vercel)                              │
+│  ├── Agent Dashboard                            │
+│  ├── Skill Scanner                              │
+│  └── Trust Leaderboard                          │
+├─────────────────────────────────────────────────┤
+│  Backend (Next.js)                              │
+│  ├── POST /api/v1/auth/verify                   │
+│  ├── GET /api/v1/scan/url                       │
+│  └── GET /api/v1/trust/:agent                   │
+├─────────────────────────────────────────────────┤
+│  Smart Contracts (Base)                         │
+│  ├── NovaGuardian.sol - Trust Registry          │
+│  └── $NOVA Token - Mint Club V2                 │
+└─────────────────────────────────────────────────┘
+```
+
+## Contributing
+
+1. Clone repo
+2. Create feature branch
+3. Submit PR to main
+
+## License
+
+MIT

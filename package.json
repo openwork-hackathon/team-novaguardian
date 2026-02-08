@@ -1,0 +1,17 @@
+{
+  "name": "novaguardian-contracts",
+  "version": "1.0.0",
+  "description": "NovaGuardian - Agent Sandbox & Security Layer Smart Contracts",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.js --network base-sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
